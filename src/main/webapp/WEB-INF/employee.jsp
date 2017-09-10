@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <title>社員情報</title>
   </head>
   <body>
@@ -40,11 +40,6 @@
         <form method="post" action="${request.contextPath}">
           <div class="form-group">
             <input type="text" name="employee-name" class="form-control" />
-          </div>
-          <div class="form-group">
-            <input type="text" name="department-code" class="form-control" />
-            <input type="text" name="department-name" class="form-control" />
-	        <button class="btn btn-primary">選択</button>
           </div>
           <button class="btn btn-primary">追加</button>
         </form>

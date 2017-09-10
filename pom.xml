@@ -66,10 +66,9 @@
 
 	<build>
 		<finalName>sample-glassfish</finalName>
-		<!-- JavaEEの仕様に従ってclassファイルを配置するための設定 -->
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>src/main/webapp/WEB-INF/test-classes</testOutputDirectory>
-		<!-- javaファイル以外のファイル格納用ソースフォルダの設定 -->
+
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -99,21 +98,19 @@
 			</testResource>
 		</testResources>
 		<plugins>
-			<!-- UTF-8のソースを正しくコンパイルしてもらうための設定 -->
 			<plugin>
 				<inherited>true</inherited>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<optimize>true</optimize>
 					<debug>true</debug>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-			<!-- WAR作成時にweb.xmlがなくてもOKにする -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
